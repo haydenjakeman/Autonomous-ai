@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Autonomous AI Observer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">AUTONOMOUS AGENT</p>
+        <h1>Observer</h1>
+        <p class="sub">An AI-style agent that can initiate thoughts without being spoken to.</p>
+      </div>
+      <button id="toggleBtn" class="primary">Start autonomy</button>
+    </header>
+
+    <section class="status">
+      <div><span>State</span><strong id="state">Idle</strong></div>
+      <div><span>Energy</span><strong id="energy">80%</strong></div>
+      <div><span>Curiosity</span><strong id="curiosity">70%</strong></div>
+      <div><span>Attention</span><strong id="attention">65%</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Thought stream</h2>
+        <button id="clearBtn">Clear</button>
+      </div>
+      <div id="feed" class="feed"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Talk to Observer</h2>
+      <form id="chatForm">
+        <input id="message" autocomplete="off" placeholder="Say something..." maxlength="500">
+        <button class="primary">Send</button>
+      </form>
+    </section>
+
+    <section class="controls">
+      <label>
+        Autonomy interval
+        <input id="interval" type="range" min="5" max="30" value="10">
+        <span id="intervalValue">10s</span>
+      </label>
+      <label class="switch">
+        <input id="voice" type="checkbox" checked>
+        <span>Speak spontaneous thoughts</span>
+      </label>
+    </section>
+
+    <footer>
+      <span>Autonomous simulation • No real consciousness claimed</span>
+    </footer>
+  </main>
+  <script src="src/agent.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
